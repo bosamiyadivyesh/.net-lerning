@@ -110,6 +110,7 @@
                 <asp:TableCell>
                     <asp:CheckBox ID="term" runat="server"/>term and condition<br />
                     <asp:Label ID="terms" runat="server" ForeColor="red"></asp:Label>
+                    <br />
                     <asp:Button ID="btn1" runat="server" Text="Registartion" OnClick="btn_Click"/>
                 </asp:TableCell>
             </asp:TableFooterRow>
