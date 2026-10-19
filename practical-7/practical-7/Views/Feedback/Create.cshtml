@@ -1,0 +1,31 @@
+﻿@model Feedback
+
+@{
+    ViewData["Title"] = "Submit Feedback";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mb-4">Submit Feedback</h2>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <form asp-action="Create" method="post">
+
+            @Html.AntiForgeryToken()
+
+            @Html.Partial("_FeedbackForm", Model)
+
+            <button type="submit" class="btn btn-primary">
+                Submit Feedback
+            </button>
+
+            <a asp-action="Index" class="btn btn-secondary">
+                View Feedback
+            </a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
